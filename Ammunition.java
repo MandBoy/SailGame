@@ -1,4 +1,4 @@
 public class Ammunition {
-    String [] types = {"Grapple","Ball","Chicken"};
+    String [] types = {"Ball","Chain","Grape"};
     int [] damage = {2};
 }

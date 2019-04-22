@@ -1,5 +1,9 @@
 public class CreateGame {
-    public CreateGame(Functions functions, Values values){
-        System.out.println("In gameCreator");
+    public CreateGame(Inputhandler inputhandler, Functions functions, Values values) {
+        createPlayer();
     }
+    public void createPlayer(){
+        Player player = new Player();
+    }
+
 }
