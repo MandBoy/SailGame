@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Ships</title>
+    <style>
+        img {
+            width: 45px;
+            height: 45px;
+        }
+    </style>
+</head>
+<body>
+    <!-- div sektioner kan bruges til at dele skærmen op -->
+    <!-- brug Bootstrap Layout - containers for at få det til at fungere -->
+    <!-- div board -->
+    <div id="board" style="width:600px; height:500px; float:left;">
+        <!-- for each image -->
+        <span th:each="image: ${images}">
+            <!-- brug image med navn på skib - kan også være sammensat af flere attributer (direction og nation) -->
+            <!-- placer ud fra koordinat - skal være udregnet til pixels -->
+            <img th:src="@{'/img/' + ${image.name} + '.PNG'}" th:style="${'position:absolute; TOP:' + image.top +'px; LEFT:' + image.left + 'px;'}"  />
+        </span>
+    </div>
+    <!-- div control -->
+    <div id="Player" style="float: right; width: 200px; height: 200px; background-color: green;">
+        <h1>Player</h1>
+    </div>
+    <div id="message" style="float: right; width: 200px; height: 200px; background-color: yellow;">
+        <h1>Ships</h1>
+    </div>
+</body>
+</html>
